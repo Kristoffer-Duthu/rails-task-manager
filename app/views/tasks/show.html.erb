@@ -1,5 +1,8 @@
-<h2><%= @task.title %></h2>
-<p><%= link_to "Back to Master list", tasks_path(@tasks) %></p>
-<p> Details: <%=  @task.details %></p>
-<p> Completed: <%=  @task.completed %></p>
-<p> <%= link_to "Delete #{@task.title}", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %> </p>
+<body>
+  <h2><%= @task.title.capitalize %></h2>
+  <p><%= link_to "Back to Master list", tasks_path(@tasks) %> || <%= link_to "Edit Task", edit_task_path(@task.id) %> </p>
+  <p> Details: <%=  @task.details %></p>
+  <p> Completed: <%=  @task.completed %></p>
+  <button type="button" class="btn-outline-warning"> <%= link_to "Delete: #{@task.title.capitalize}", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %> </button>
+</body>
+
