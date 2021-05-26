@@ -1,5 +1,5 @@
 <h1>Your Master List of Tasks!</h1>
 <% @tasks.each do |task| %>
-<h3> (<%= task.id %>) <%= link_to "#{task.title.capitalize}", task_path(task.id)  %> - <%= task.details %> : <%= task.completed %> <%=  %> </h3>
+<h3> (<%= task.id %>) <%= link_to "#{task.title.capitalize}", task_path(task.id)  %> </h3>
 <% end %>
 <button type="button" class="btn btn-danger"> +++ <%= link_to "Add Task", new_task_path(@task) %> +++ </button>
