@@ -1,4 +1,4 @@
-<h1>Your Tasks!</h1>
+<h1>Your Master List of Tasks!</h1>
 <% @tasks.each do |task| %>
-<h3> <%= task.title %> - <%= task.details %> : <%= task.completed %> </h3>
+<h3> (<%= task.id %>) <%= link_to "#{task.title.capitalize}", task_path(task.id)  %> - <%= task.details %> : <%= task.completed %> <%=  %> </h3>
 <% end %>
