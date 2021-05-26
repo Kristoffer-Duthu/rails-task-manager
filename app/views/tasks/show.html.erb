@@ -1,8 +1,15 @@
 <body>
-  <h2><%= @task.title.capitalize %></h2>
-  <p><%= link_to "Back to Master list", tasks_path(@tasks) %> || <%= link_to "Edit Task", edit_task_path(@task.id) %> </p>
-  <p> Details: <%=  @task.details %></p>
-  <p> Completed: <%=  @task.completed %></p>
-  <button type="button" class="btn-outline-warning"> <%= link_to "Delete: #{@task.title.capitalize}", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %> </button>
+  <div class="header">
+    <h4><%= @task.title.capitalize %></h4>
+  </div>
+  <div class='small-container'>
+    <p> <%=  @task.details.capitalize %> </p>
+  </div>
+  <div class="small-container">
+    <p> Completed: <%=  @task.completed %> </p>
+  </div>
+  <button type="button" class="btn btn-warning"> <%= link_to "Delete Task", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %> </button>
+  <button type="button" class="btn btn-success"> <%= link_to "Edit Task", edit_task_path(@task.id) %> </button>
+  <button type="button" class="btn btn-primary"> <%= link_to "Back to Master list", tasks_path(@tasks) %> </button>
 </body>
 

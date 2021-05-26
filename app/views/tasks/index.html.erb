@@ -1,12 +1,16 @@
 <body>
   <div class="header">
-    <h1>Your Master List of Tasks!</h1>
+    <h2> My Task List!</h2>
+
   </div>
   <div class="big-container">
   <% @tasks.each do |task| %>
-  <h3> (<%= task.id %>) <%= link_to "#{task.title.capitalize}", task_path(task.id) %> </h3>
+  <h4> (-) <%= link_to "#{task.title.capitalize}", task_path(task.id) %> </h4>
   <% end %>
   <button type="button" class="btn btn-primary"> <%= link_to "Add Task", new_task_path(@task) %>  </button>
   </div>
 
+
+
 </body>
+
