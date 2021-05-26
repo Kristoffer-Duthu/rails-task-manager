@@ -5,7 +5,8 @@
   </div>
   <div class="big-container">
   <% @tasks.each do |task| %>
-  <h4> (-) <%= link_to "#{task.title.capitalize}", task_path(task.id) %> </h4>
+  <h4> - <%= link_to "#{task.title.capitalize}", task_path(task.id) %>  </h4>
+<!--   <i class="fas fa-trash"> </i> <i class="far fa-edit"></i> -->
   <% end %>
   <button type="button" class="btn btn-primary"> <%= link_to "Add Task", new_task_path(@task) %>  </button>
   </div>

@@ -8,8 +8,9 @@
   <div class="small-container">
     <p> Completed: <%=  @task.completed %> </p>
   </div>
-  <button type="button" class="btn btn-warning"> <%= link_to "Delete Task", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %> </button>
+  <button type="button" class="btn btn-primary"> <%= link_to "Back to Tasks list", tasks_path(@tasks) %> </button>
   <button type="button" class="btn btn-success"> <%= link_to "Edit Task", edit_task_path(@task.id) %> </button>
-  <button type="button" class="btn btn-primary"> <%= link_to "Back to Master list", tasks_path(@tasks) %> </button>
+  <button type="button" class="btn btn-warning"> <%= link_to "Delete Task", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %> </button>
+
 </body>
 
