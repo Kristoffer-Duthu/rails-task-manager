@@ -14,3 +14,29 @@
  *= require_self
  */
  @import "bootstrap/scss/bootstrap";
+
+body {
+  width: 500px;
+  background-color: white;
+  margin: 16px;
+}
+
+.big-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #d3d3d3;
+  border-radius: 8;
+}
+
+.header {
+  background-color: #d3d3d3;
+}
+
+.btn btn-primary {
+  color: white;
+
+}
+
+h3 {
+
+}
