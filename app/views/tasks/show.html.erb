@@ -1,17 +1,17 @@
 <body>
 
   <div class="header">
-    <h4><%= @task.title.capitalize %></h4>
+    <h4 class="show-header"><%= @task.title.capitalize %></h4>
   </div>
 
   <div class='small-container'>
     <p> <%=  @task.details.capitalize %> </p>
     <p> Completed: <%=  @task.completed %> </p>
   </div>
-
-  <button type="button" class="btn btn-primary"> <%= link_to "Back to Tasks list", tasks_path(@tasks) %> </button>
-  <button type="button" class="btn btn-success"> <%= link_to "Edit Task", edit_task_path(@task.id) %> </button>
-  <button type="button" class="btn btn-warning"> <%= link_to "Delete Task", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %> </button>
-
+  <div class="button-components">
+    <button type="button" class="btn btn-success"> <%= link_to "Edit Task", edit_task_path(@task.id) %> </button>
+    <button type="button" class="btn btn-primary"> <%= link_to "Back to Tasks list", tasks_path(@tasks) %> </button>
+    <button type="button" class="btn btn-warning"> <%= link_to "Delete Task", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %> </button>
+  </div>
 </body>
 
