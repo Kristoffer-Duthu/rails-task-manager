@@ -28,6 +28,8 @@ h2 {
   font-family: 'Arvo', serif;
   font-weight: 700;
   font-style: italic;
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .big-container {
@@ -41,6 +43,8 @@ h2 {
 
 .big-container h4 {
   font-weight: lighter;
+  color:#fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .show-header {
@@ -53,10 +57,10 @@ h2 {
   padding: 8px;
   margin: 8px;
   text-decoration: underline;
+  color:#fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
-h2{
-  text-decoration: underline;
-}
+
 .btn-primary a {
   color:  #F5F5F5;
   text-align: center;
