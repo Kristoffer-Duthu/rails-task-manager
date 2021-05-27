@@ -32,9 +32,13 @@ class TasksController < ApplicationController
   end
 
   def mark_as_done
-    @task.completed = true
-    @task.save
-    redirect_to tasks_path
+    if @task.completed == false
+      @task.completed = true
+    else
+      @task.completed = false
+    end
+  @task.save
+  redirect_to tasks_path
   end
 
   private
