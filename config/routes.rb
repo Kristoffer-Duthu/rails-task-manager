@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :tasks
+  put 'tasks/:id/mark_as_done', to: 'tasks#mark_as_done', as: :mark_as_done
   # # read all tasks
   # get 'tasks', to: 'tasks#index'
   # # read one task / add a task / create it
