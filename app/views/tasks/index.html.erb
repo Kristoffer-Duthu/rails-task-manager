@@ -1,15 +1,14 @@
 <body>
-
   <div class="big-container">
     <h2> My Task List</h2>
     <% @tasks.each do |task| %>
     <h4>
       <%= link_to mark_as_done_path(task), method: :put do %>
-        <% if task.completed == true %>
-          <i class="far fa-check-square"></i>
-        <% else %>
-          <i class="far fa-square"></i>
-        <% end%>
+      <% if task.completed == true %>
+      <i class="far fa-check-square"></i>
+      <% else %>
+      <i class="far fa-square"></i>
+      <% end%>
       <% end %>
       <%= link_to "#{task.title.capitalize}", task_path(task.id) %>
     </h4>
@@ -20,5 +19,4 @@
   </div>
 </body>
 
-<!--  -->
 
