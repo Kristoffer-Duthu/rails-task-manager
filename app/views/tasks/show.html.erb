@@ -6,7 +6,7 @@
 
   <div class='small-container'>
     <p> <%=  @task.details.capitalize %> </p>
-    <p> Task: <%= "#{@task.completed? ? 'Completed' : 'Incomplete'}" %> </p>
+    <p> Task: <%= "#{@task.completed? ? 'Completed 😇' : 'Incomplete 😈'}" %> </p>
   </div>
   <div class="button-components">
     <button type="button" class="btn btn-success"> <%= link_to "Edit Task", edit_task_path(@task.id) %> </button>
